@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Downloading...</title>
+    <meta charset="UTF-8">
+    <script>
+        (function() {
+            // 在这里配置您的下载链接
+            const anzhuolink = "https://www.pgyer.com/aLejJyPW"; // 安卓下载链接
+            const ioslink = "";      // iOS下载链接
+
+            const u = navigator.userAgent;
+            const isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+            const isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+
+            if (isiOS && ioslink) {
+                window.location.href = ioslink;
+            } else if (isAndroid && anzhuolink) {
+                window.location.href = anzhuolink;
+            }
+            // 如果两个链接都未提供，或者无法识别操作系统，页面将保持空白。
+        })();
+    </script>
+</head>
+<body>
+</body>
+</html>
